@@ -1,0 +1,93 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+}
+.field-error {
+    border-color: red;
+}
+div.field-error {
+    color: red;
+}
+form {
+    width: 500px;
+    padding: 30px;
+    padding-top: 30px;
+    text-align: left;
+}
+input{
+    font-size: 25px;
+    border: none;
+    border-bottom: 2px solid black;
+    padding: 5px;
+}
+button {
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    border-width: 3px;
+    background-color: beige;
+    color: black;
+    border: 2px solid black;
+    font-weight: bolder;
+    font-size: large;
+
+    cursor: pointer;
+
+    opacity: 1;
+    transition: 0.3s;
+}
+button:hover{
+    opacity: 0.7;
+
+}
+.myButton2{
+    background: beige;
+    color: black;
+    width: 140px;
+}
+.myButton3 {
+    height: 30px;
+    font-size: medium;
+    background-color: lightgray;
+    margin: 0px;
+    border-width: 1px;
+    border-radius: 0px;
+}
+.myButton4 {
+    width: 200px;
+    margin-bottom: 10px;
+}
+nav {
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bolder;
+    background-color: forestgreen;
+    padding-top: 10px;
+    height: 60px;"
+}
+table {
+    border-style: solid;
+    border-color: black;
+    text-align: center;
+    border-collapse: collapse;
+}
+th {
+    border-bottom: solid black 3px;
+}
+td {
+    border : solid black 1px;
+}
+.wrapper{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    padding: 15px;
+}
+.wrapper>div{
+    margin-top: 20px;
+}
+.wrapper>.btn-wrapper{
+    display: inline-block;
+    float: left;
+}

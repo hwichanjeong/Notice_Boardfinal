@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments.html :: myHeader"/>
+<body>
+<nav th:replace="fragments.html :: myNav ('로그인')"/>
+<div th:replace="fragments.html :: topDiv1" style="background: none; color: black"/>
+<br/><br/><br/><br/>
+<div align="center">
+    <form action="loginForm.html" th:action th:method="post" th:object="${userLoginForm}"  autocomplete="off">
+        <div>
+            <label th:for="loginId">아이디 : </label>
+            <input type="text" th:field="*{loginId}" th:errorclass="field-error" placeholder="ID를 입력해주세요"/>
+            <div class="field-error" th:errors="*{loginId}" />
+        </div>
+        <br/>
+        <div>
+            <label th:for="password">비밀번호 : </label>
+            <input type="password" th:field="*{password}" th:errorclass="field-error" PLACEHOLDER="Password를 입력해주세요"/>
+            <div class="field-error" th:errors="*{password}" />
+        </div>
+        <br/>
+        <div th:if="${#fields.hasGlobalErrors()}" class="field-error" th:each="err : ${#fields.globalErrors()}" th:text="${err}"/>
+        <br/>
+        <div align="center">
+            <button type="submit" style="background-color: lightgray; width: 500px">로그인</button>
+        </div>
+    </form>
+    <br/>
+    <button onclick="location.href='/oauth2/authorization/google'" class="myButton4" style="background-color: whitesmoke;">구글 로그인</button> <br/>
+    <button onclick="location.href='/oauth2/authorization/facebook'" class="myButton4" style="background-color: deepskyblue; color: black">페이스북 로그인</button> <br/>
+    <button onclick="location.href='/oauth2/authorization/naver'" class="myButton4" style="background-color: lime;color: black">네이버 로그인</button> <br/>
+    <button onclick="location.href='/oauth2/authorization/kakao'" class="myButton4" style="background: #e5e503; color: black">카카오 로그인</button>
+</div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>알림창</title>
+</head>
+<body>
+<script>
+    alert('[[${msg}]]');
+    //기존페이지를 새로운 페이지로 변경시킨다.
+    location.replace('[[${url}]]');
+</script>
+</body>
+</html>
